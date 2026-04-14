@@ -59,7 +59,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Starter.kicad_prl",
+    "filename": "DuelTank.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -88,16 +88,16 @@
       9
     ],
     "col_widths": [
-      294,
-      279,
-      173,
-      120,
-      173,
-      173,
-      173,
-      126,
-      173,
-      173
+      222,
+      207,
+      136,
+      92,
+      136,
+      136,
+      136,
+      98,
+      136,
+      136
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
