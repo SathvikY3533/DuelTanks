@@ -1,0 +1,1113 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.4                      
+******************************************************************************
+>> Linked Thu Apr 23 13:57:24 2026
+
+OUTPUT FILE NAME:   <ECE319K_Lab9H.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00019f1d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  0001a388  00005c78  R  X
+  SRAM                  20200000   00008000  00000587  00007a79  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0001a388   0001a388    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00013f90   00013f90    r-- .rodata
+  00014050    00014050    00006288   00006288    r-x .text
+  0001a2d8    0001a2d8    00000008   00000008    r-- .init_array
+  0001a2e0    0001a2e0    000000a8   000000a8    r-- .cinit
+20200000    20200000    00000387   00000000    rw-
+  20200000    20200000    00000200   00000000    rw- .sysmem
+  20200200    20200200    00000120   00000000    rw- .data
+  20200320    20200320    00000067   00000000    rw- .bss
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g3507_ticlang.o (.intvecs)
+
+.binit     0    00000000    00000000     
+
+.text      0    00014050    00006288     
+                  00014050    0000064c     Game.o (.text._ZL14State_Gameplayj)
+                  0001469c    0000052c     Game.o (.text._ZL10Draw_Rulesv)
+                  00014bc8    000003ac     Game.o (.text._ZL15Update_Missilesv)
+                  00014f74    000003a8     Game.o (.text._ZL19Draw_CityBackgroundv)
+                  0001531c    00000368     Game.o (.text._ZL10GetBGColorss)
+                  00015684    00000340     Game.o (.text._ZL17SplashAnim_Updatev)
+                  000159c4    00000280     Game.o (.text._ZL15Draw_TankSelectv)
+                  00015c44    00000268     Game.o (.text._ZL11End_ByTimerv)
+                  00015eac    000001de     Game.o (.text._ZL9DrawRRectsssst)
+                  0001608a    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  0001608c    000001d0     Game.o (.text._ZL12Draw_AimLinev)
+                  0001625c    000001c4     Game.o (.text._ZL11Handle_UARTv)
+                  00016420    000001b4     Clock.o (.text._Z15Clock_Init80MHzi)
+                  000165d4    000001b0     Game.o (.text._ZL13Draw_Languagev)
+                  00016784    000001a0     ST7735.o (.text._Z16ST7735_DrawCharSsscssh)
+                  00016924    00000164     Game.o (.text._ZL14Enter_Gameplayv)
+                  00016a88    0000014c     Game.o (.text._ZL13Erase_AimLinev)
+                  00016bd4    00000138     GameUART.o (.text._Z16GameUART_ReceiveP12GamePacket_t)
+                  00016d0c    0000012c     Game.o (.text._ZL12Fire_Missilehhb)
+                  00016e38    0000011e     Graphics.o (.text._Z12GFX_DrawLinesssst)
+                  00016f56    0000011c     Game.o (.text._ZL14RestoreTerrainssss)
+                  00017072    00000002     --HOLE-- [fill = 0]
+                  00017074    00000118     ST7735.o (.text._Z15ST7735_FillRectsssst)
+                  0001718c    00000110     Game.o (.text._ZL11Check_Combov)
+                  0001729c    00000110     Game.o (.text._ZL17Update_Explosionsv)
+                  000173ac    00000108     Game.o (.text._ZL14Draw_ChargeBarv)
+                  000174b4    00000100     Game.o (.text._ZL9FillRRectsssst)
+                  000175b4    000000fc     Game.o (.text._ZL11Use_Abilityv)
+                  000176b0    000000fc     Game.o (.text._ZL13SplashRestoressss)
+                  000177ac    000000fc     Game.o (.text._ZL14Spawn_Incominghhh)
+                  000178a8    000000f8     SPI.o (.text._Z8SPI_Initv)
+                  000179a0    000000f4     ST7735.o (.text._Z18ST7735_SetRotationh)
+                  00017a94    000000ec     Game.o (.text._ZL11Draw_Splashv)
+                  00017b80    000000ea     Game.o (.text._ZL10DrawSpritessPKtss)
+                  00017c6a    000000ea     Game.o (.text._ZL13DrawSpriteHUDssPKtss)
+                  00017d54    000000e4     Game.o (.text._ZL13Draw_TimerStrv)
+                  00017e38    000000d8     Game.o (.text._ZL10Draw_Livesv)
+                  00017f10    000000d8     Game.o (.text._ZL13State_Waitingj)
+                  00017fe8    000000d8     libclang_rt.builtins.a : addsf3.S.obj (.text)
+                  000180c0    000000d0     Graphics.o (.text._Z12GFX_FillRectsssst)
+                  00018190    000000bc     Game.o (.text._ZL14Draw_Countdownh)
+                  0001824c    000000b4     Game.o (.text._ZL11State_Rulesj)
+                  00018300    000000b4     Game.o (.text._ZL16State_TankSelectj)
+                  000183b4    000000ae     Graphics.o (.text._Z12GFX_DrawRectsssst)
+                  00018462    000000a8     Game.o (.text._ZL11RectOverlapssssssss)
+                  0001850a    00000002     --HOLE-- [fill = 0]
+                  0001850c    000000a4     Game.o (.text._ZL14State_Languagej)
+                  000185b0    000000a2     ST7735.o (.text._ZL11commandListPKh)
+                  00018652    00000002     --HOLE-- [fill = 0]
+                  00018654    000000a0     Game.o (.text._ZL9Draw_Tankssbh)
+                  000186f4    000000a0     libc.a : e_sqrtf.c.obj (.text.sqrtf)
+                  00018794    00000098     Switches.o (.text._Z11Switch_Tickv)
+                  0001882c    00000098     ST7735.o (.text._Z12ST7735_InitR10initRFlags)
+                  000188c4    00000098     GameUART.o (.text._ZL10sendPackethhh)
+                  0001895c    00000090     Game.o (.text._ZL12State_Splashj)
+                  000189ec    00000090     Game.o (.text._ZL7StatBarssht)
+                  00018a7c    0000008e     Game.o (.text._ZL11TankGroundYs)
+                  00018b0a    00000002     --HOLE-- [fill = 0]
+                  00018b0c    0000008c     Switches.o (.text._Z11Switch_Initv)
+                  00018b98    0000008c     GameUART.o (.text._ZL14UART2_GameInitv)
+                  00018c24    0000008c     libclang_rt.builtins.a : mulsf3.S.obj (.text.__mulsf3)
+                  00018cb0    00000088     Game.o (.text._Z11Game_Updatej)
+                  00018d38    00000088     ST7735.o (.text._ZL13setAddrWindowhhhh)
+                  00018dc0    00000084     Graphics.o (.text._Z14GFX_FillCirclessst)
+                  00018e44    00000084     Sound.o (.text._ZL18__NVIC_SetPriority4IRQnj)
+                  00018ec8    00000080     GameUART.o (.text._ZL14UART1_GameInitv)
+                  00018f48    0000007c     LaunchPad.o (.text._Z14LaunchPad_Initv)
+                  00018fc4    0000007c     Game.o (.text._ZL15State_Countdownj)
+                  00019040    0000007c     SlidePot.o (.text._ZN8SlidePot4InitEv)
+                  000190bc    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00019138    00000078     Game.o (.text._ZL15Spawn_Explosionss)
+                  000191b0    00000074     Graphics.o (.text._Z14GFX_DrawStringssPKctth)
+                  00019224    00000070     ST7735.o (.text._Z16ST7735_DrawPixelsst)
+                  00019294    00000068     Sound.o (.text._Z10Sound_Beeph)
+                  000192fc    00000064     Graphics.o (.text._Z22GFX_DrawStringCenteredsPKctth)
+                  00019360    00000060     Game.o (.text._ZL8Take_Hitss)
+                  000193c0    0000005a     Graphics.o (.text._Z13GFX_DrawPixelsst)
+                  0001941a    00000002     --HOLE-- [fill = 0]
+                  0001941c    00000058     Game.o (.text._ZL12Draw_Waitingv)
+                  00019474    00000056     libclang_rt.builtins.a : aeabi_idivmod.S.obj (.text.__aeabi_idivmod)
+                  000194ca    00000002     --HOLE-- [fill = 0]
+                  000194cc    00000054     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit)
+                  00019520    00000050     Sound.o (.text.SysTick_Handler)
+                  00019570    00000050     StatusLEDs.o (.text._Z10led_togglej)
+                  000195c0    00000050     Game.o (.text._ZL9State_Endj)
+                  00019610    0000004c     Game.o (.text._ZL11FreeMissilev)
+                  0001965c    0000004c     Game.o (.text._ZL15Erase_ChargeBarv)
+                  000196a8    0000004c     GameUART.o (.text._ZL5rxPopPh)
+                  000196f4    0000004c     Game.o (.text._ZL7FreeExpv)
+                  00019740    00000048     SPI.o (.text._Z14SPI_OutCommandc)
+                  00019788    00000048     Game.o (.text._ZL12GetBarrelTipPsS_)
+                  000197d0    00000048     SlidePot.o (.text._ZN8SlidePot2InEv)
+                  00019818    00000048     Lab9HMain.o (.text.main)
+                  00019860    00000044     Graphics.o (.text._Z16GFX_DrawIncomingv)
+                  000198a4    00000044     DAC5.o (.text._Z9DAC5_Initv)
+                  000198e8    00000044     Switches.o (.text._Z9Switch_Inv)
+                  0001992c    00000044     Game.o (.text._ZL12Blink_Promptb)
+                  00019970    00000042     Graphics.o (.text._Z12GFX_DrawCharssctth)
+                  000199b2    00000002     --HOLE-- [fill = 0]
+                  000199b4    00000040     TExaS.o (.text.TIMG7_IRQHandler)
+                  000199f4    00000040     SPI.o (.text._Z9SPI_Resetv)
+                  00019a34    00000040     Game.o (.text._ZL2TYs)
+                  00019a74    00000040     GameUART.o (.text._ZL6rxPushh)
+                  00019ab4    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00019af4    0000003c     Sound.o (.text._Z14SysTick_IntArmjj)
+                  00019b30    0000003c     Game.o (.text._ZL16BattleReady_Initv)
+                  00019b6c    0000003c     libclang_rt.builtins.a : floatsisf.S.obj (.text.__floatsisf)
+                  00019ba8    0000003a                            : muldsi3.S.obj (.text.__muldsi3)
+                  00019be2    00000002     --HOLE-- [fill = 0]
+                  00019be4    00000038     SPI.o (.text._Z11SPI_OutDatac)
+                  00019c1c    00000038     Sound.o (.text._Z11Sound_StartPKhj)
+                  00019c54    00000038     LaunchPad.o (.text._Z15ActivatePortA_Bv)
+                  00019c8c    00000038     Graphics.o (.text._Z17GFX_ClearIncomingv)
+                  00019cc4    00000038     libclang_rt.builtins.a : fixsfsi.S.obj (.text.__fixsfsi)
+                  00019cfc    00000034     Clock.o (.text._Z14Clock_Delay1msj)
+                  00019d30    00000034     ST7735.o (.text._Z16ST7735_SetCursorjj)
+                  00019d64    00000034     Game.o (.text._ZL8Draw_HUDv)
+                  00019d98    00000032     GameUART.o (.text._Z17GameUART_SendFirehhh)
+                  00019dca    00000002     --HOLE-- [fill = 0]
+                  00019dcc    00000030     ST7735.o (.text._ZL10commonInitPKh)
+                  00019dfc    0000002c     Sound.o (.text._Z10Sound_Initv)
+                  00019e28    0000002c     ST7735.o (.text._Z17ST7735_FillScreent)
+                  00019e54    00000028     Lab9HMain.o (.text.TIMG12_IRQHandler)
+                  00019e7c    00000028     Sound.o (.text._Z10Sound_Stopv)
+                  00019ea4    00000028     GameUART.o (.text._Z13GameUART_Initv)
+                  00019ecc    00000028     Game.o (.text._ZL12Enter_Splashv)
+                  00019ef4    00000028     Game.o (.text._ZL2GSPKcS0_)
+                  00019f1c    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00019f44    00000024     Sound.o (.text._Z11Sound_Clickv)
+                  00019f68    00000024     Sound.o (.text._Z13Sound_Barrierv)
+                  00019f8c    00000024     Sound.o (.text._Z14Sound_Incomingv)
+                  00019fb0    00000022     Game.o (.text._ZL10Erase_Tankss)
+                  00019fd2    00000002     --HOLE-- [fill = 0]
+                  00019fd4    00000020     DAC5.o (.text._Z8DAC5_Outj)
+                  00019ff4    0000001e     ST7735.o (.text._ZL9pushColort)
+                  0001a012    0000001e     SlidePot.o (.text._ZN8SlidePotC2Ejj)
+                  0001a030    0000001c     startup_mspm0g3507_ticlang.o (.text.Default_Handler)
+                  0001a04c    0000001c     startup_mspm0g3507_ticlang.o (.text.HardFault_Handler)
+                  0001a068    0000001c     Switches.o (.text._Z11Switch_Heldh)
+                  0001a084    0000001c     Switches.o (.text._Z14Switch_Pressedh)
+                  0001a0a0    0000001c     Switches.o (.text._Z15Switch_Releasedh)
+                  0001a0bc    0000001c     Graphics.o (.text._Z8GFX_Initv)
+                  0001a0d8    00000018     Sound.o (.text._Z11Sound_Fightv)
+                  0001a0f0    00000018     Sound.o (.text._Z11Sound_Shootv)
+                  0001a108    00000018     Sound.o (.text._Z12Sound_Defeatv)
+                  0001a120    00000018     Sound.o (.text._Z13Sound_Victoryv)
+                  0001a138    00000018     Sound.o (.text._Z15Sound_Explosionv)
+                  0001a150    00000018     GameUART.o (.text._Z16GameUART_SendHith)
+                  0001a168    00000018     GameUART.o (.text._Z16GameUART_SendWinh)
+                  0001a180    00000018     GameUART.o (.text._Z17GameUART_SendLangh)
+                  0001a198    00000018     GameUART.o (.text._Z17GameUART_SendTankh)
+                  0001a1b0    00000018     Lab9HMain.o (.text.__cxx_global_var_init)
+                  0001a1c8    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  0001a1de    00000014     Graphics.o (.text._Z14GFX_FillScreent)
+                  0001a1f2    00000002     --HOLE-- [fill = 0]
+                  0001a1f4    00000014     GameUART.o (.text._ZL14uart2Availablev)
+                  0001a208    00000012     libc.a : memcpy16.S.obj (.text:TI_memcpy_small)
+                  0001a21a    00000012            : copy_decompress_none.c.obj (.text:decompress:none)
+                  0001a22c    00000010     Clock.o (.text._Z11Clock_Delayj)
+                  0001a23c    00000010     Sound.o (.text._Z15Sound_IsPlayingv)
+                  0001a24c    00000010     Game.o (.text._ZL19BattleReady_SetHighv)
+                  0001a25c    00000010     Graphics.o (.text._ZNSt3__16__math4sqrtB8nn180100Ef)
+                  0001a26c    0000000e     libc.a : strlen.c.obj (.text.strlen)
+                  0001a27a    00000002     --HOLE-- [fill = 0]
+                  0001a27c    0000000c     Clock.o (.text._Z10Clock_Freqv)
+                  0001a288    0000000c     Game.o (.text._ZL20BattleReady_OppReadyv)
+                  0001a294    0000000a     Lab9HMain.o (.text._Z8PLL_Initv)
+                  0001a29e    00000008     Lab9HMain.o (.text._GLOBAL__sub_I_Lab9HMain.cpp)
+                  0001a2a6    00000008     Game.o (.text._Z9Game_Initv)
+                  0001a2ae    00000002     --HOLE-- [fill = 0]
+                  0001a2b0    00000008     libc.a : aeabi_portable.c.obj (.text.__aeabi_errno_addr)
+                  0001a2b8    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  0001a2c0    00000006     libc.a : exit.c.obj (.text:abort)
+                  0001a2c6    00000004     libsysbm.a : hostexit.c.obj (.text.HOSTexit)
+                  0001a2ca    00000004     startup_mspm0g3507_ticlang.o (.text.Reset_Handler)
+                  0001a2ce    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  0001a2d2    00000006     --HOLE-- [fill = 0]
+
+.cinit     0    0001a2e0    000000a8     
+                  0001a2e0    0000007f     (.cinit..data.load) [load image, compression = lzss]
+                  0001a35f    00000001     --HOLE-- [fill = 0]
+                  0001a360    0000000c     (__TI_handler_table)
+                  0001a36c    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0001a374    00000010     (__TI_cinit_table)
+                  0001a384    00000004     --HOLE-- [fill = 0]
+
+.rodata    0    000000c0    00013f90     
+                  000000c0    000064cd     SoundData.o (.rodata.Sound_ShootData)
+                  0000658d    00004a11     SoundData.o (.rodata.iso_shield)
+                  0000af9e    00002652     SoundData.o (.rodata.Sound_VictoryData)
+                  0000d5f0    0000188b     SoundData.o (.rodata.Sound_DefeatData)
+                  0000ee7b    00001588     SoundData.o (.rodata.Sound_ExplosionData)
+                  00010403    0000052b     SoundData.o (.rodata.Sound_BeepHighData)
+                  0001092e    0000052b     SoundData.o (.rodata.Sound_BeepLowData)
+                  00010e59    0000052b     SoundData.o (.rodata.Sound_BeepMidData)
+                  00011384    000004fb     ST7735.o (.rodata._ZL4Font)
+                  0001187f    0000044e     SoundData.o (.rodata.Sound_FightData)
+                  00011ccd    0000044e     SoundData.o (.rodata.Sound_IncomingData)
+                  0001211b    00000001     --HOLE-- [fill = 0]
+                  0001211c    00000240     Sprites.o (.rodata.Tank1Left)
+                  0001235c    00000240     Sprites.o (.rodata.Tank1Right)
+                  0001259c    00000240     Sprites.o (.rodata.Tank2Left)
+                  000127dc    00000240     Sprites.o (.rodata.Tank2Right)
+                  00012a1c    00000240     Sprites.o (.rodata.Tank3Left)
+                  00012c5c    00000240     Sprites.o (.rodata.Tank3Right)
+                  00012e9c    00000188     Sprites.o (.rodata.ExpF0)
+                  00013024    00000188     Sprites.o (.rodata.ExpF1)
+                  000131ac    00000188     Sprites.o (.rodata.ExpF2)
+                  00013334    00000188     Sprites.o (.rodata.ExpF3)
+                  000134bc    0000014a     SoundData.o (.rodata.Sound_ClickData)
+                  00013606    000000a0     Sprites.o (.rodata.TerrainY)
+                  000136a6    00000080     Sprites.o (.rodata.HeartEmpty)
+                  00013726    00000080     Sprites.o (.rodata.HeartFull)
+                  000137a6    00000064     Sprites.o (.rodata.MissileLeft)
+                  0001380a    00000064     Sprites.o (.rodata.MissileRight)
+                  0001386e    0000005a     Game.o (.rodata.cos32)
+                  000138c8    0000005a     Game.o (.rodata.sin32)
+                  00013922    0000003b     ST7735.o (.rodata._ZL5Rcmd1)
+                  0001395d    0000002b     ST7735.o (.rodata._ZL5Rcmd3)
+                  00013988    00000024     Game.o (.rodata..L__const._ZL19Draw_CityBackgroundv.lb)
+                  000139ac    0000001e     Game.o (.rodata..L__const._ZL19Draw_CityBackgroundv.rb)
+                  000139ca    00000002     Game.o (.rodata.str1.17821796313496660583.1)
+                  000139cc    00000018     Sprites.o (.rodata.TankSprites)
+                  000139e4    00000016     Game.o (.rodata.str1.16177599345850174272.1)
+                  000139fa    00000015     Game.o (.rodata.str1.16540591241938195485.1)
+                  00013a0f    00000015     Game.o (.rodata.str1.17888758053847311617.1)
+                  00013a24    00000015     Game.o (.rodata.str1.9623854516537756061.1)
+                  00013a39    00000014     Game.o (.rodata.str1.11221844826941431662.1)
+                  00013a4d    00000013     Game.o (.rodata.str1.14691375200294000687.1)
+                  00013a60    00000013     Game.o (.rodata.str1.18021318232210844513.1)
+                  00013a73    00000013     Game.o (.rodata.str1.4324258347285904705.1)
+                  00013a86    00000013     Game.o (.rodata.str1.737511131151580408.1)
+                  00013a99    00000013     Game.o (.rodata.str1.8918522173831450158.1)
+                  00013aac    00000012     Game.o (.rodata.str1.10804680611565133117.1)
+                  00013abe    00000012     Game.o (.rodata.str1.12954715099747861232.1)
+                  00013ad0    00000012     Game.o (.rodata.str1.13900076539421561396.1)
+                  00013ae2    00000012     Game.o (.rodata.str1.16236477189235523260.1)
+                  00013af4    00000012     Game.o (.rodata.str1.5661022618669492354.1)
+                  00013b06    00000012     Game.o (.rodata.str1.6471525796049428328.1)
+                  00013b18    00000011     Game.o (.rodata._ZZL19Draw_CityBackgroundvE2sx)
+                  00013b29    00000011     Game.o (.rodata._ZZL19Draw_CityBackgroundvE2sy)
+                  00013b3a    00000011     Game.o (.rodata.str1.10777865009680008423.1)
+                  00013b4b    00000011     Game.o (.rodata.str1.16346314234308644770.1)
+                  00013b5c    00000011     Game.o (.rodata.str1.2233586490385583052.1)
+                  00013b6d    00000011     Game.o (.rodata.str1.2697910794748391843.1)
+                  00013b7e    00000011     Game.o (.rodata.str1.5679308050117312726.1)
+                  00013b8f    00000001     --HOLE-- [fill = 0]
+                  00013b90    00000010     Sprites.o (.rodata.ExpFrames)
+                  00013ba0    00000010     Game.o (.rodata.str1.10184310830403209861.1)
+                  00013bb0    00000010     Game.o (.rodata.str1.10295892378024895029.1)
+                  00013bc0    00000010     Game.o (.rodata.str1.11269509389594337379.1)
+                  00013bd0    00000010     Game.o (.rodata.str1.12149956452856763188.1)
+                  00013be0    00000010     Game.o (.rodata.str1.17593292145807653188.1)
+                  00013bf0    00000010     Game.o (.rodata.str1.5481774029835992308.1)
+                  00013c00    00000010     Game.o (.rodata.str1.8166665405873783589.1)
+                  00013c10    0000000f     Game.o (.rodata.str1.18155027241514492913.1)
+                  00013c1f    0000000f     Game.o (.rodata.str1.4507158416160602059.1)
+                  00013c2e    0000000f     Game.o (.rodata.str1.6087799752856876214.1)
+                  00013c3d    0000000f     Game.o (.rodata.str1.7095934273198498139.1)
+                  00013c4c    0000000e     Game.o (.rodata.str1.13423611766012749984.1)
+                  00013c5a    0000000e     Game.o (.rodata.str1.13507053844483547921.1)
+                  00013c68    0000000e     Game.o (.rodata.str1.3668641361974611878.1)
+                  00013c76    0000000e     Game.o (.rodata.str1.4021224667941587012.1)
+                  00013c84    0000000e     Game.o (.rodata.str1.4912474137092573959.1)
+                  00013c92    0000000e     Game.o (.rodata.str1.6770008167060065767.1)
+                  00013ca0    0000000d     ST7735.o (.rodata._ZL10Rcmd2green)
+                  00013cad    0000000d     ST7735.o (.rodata._ZL8Rcmd2red)
+                  00013cba    0000000d     Game.o (.rodata.str1.10474741439503467589.1)
+                  00013cc7    0000000d     Game.o (.rodata.str1.11212288701037801672.1)
+                  00013cd4    0000000d     Game.o (.rodata.str1.12109774533509479769.1)
+                  00013ce1    0000000d     Game.o (.rodata.str1.14248972295496145672.1)
+                  00013cee    0000000d     Game.o (.rodata.str1.7976084535036090599.1)
+                  00013cfb    00000001     --HOLE-- [fill = 0]
+                  00013cfc    0000000c     Game.o (.rodata._ZL3lbt)
+                  00013d08    0000000c     Game.o (.rodata._ZL3lbw)
+                  00013d14    0000000c     Game.o (.rodata._ZL3lbx)
+                  00013d20    0000000c     Game.o (.rodata.str1.1010959785748814376.1)
+                  00013d2c    0000000c     Game.o (.rodata.str1.10178283951020376317.1)
+                  00013d38    0000000c     Game.o (.rodata.str1.14201594219737403726.1)
+                  00013d44    0000000c     Game.o (.rodata.str1.14459362279505040181.1)
+                  00013d50    0000000c     Game.o (.rodata.str1.15795245400524242078.1)
+                  00013d5c    0000000c     Game.o (.rodata.str1.15962062751726776177.1)
+                  00013d68    0000000c     Game.o (.rodata.str1.16434201441813453988.1)
+                  00013d74    0000000c     Game.o (.rodata.str1.167877858898368295.1)
+                  00013d80    0000000c     Game.o (.rodata.str1.16954824243201682687.1)
+                  00013d8c    0000000c     Game.o (.rodata.str1.1705993166138190377.1)
+                  00013d98    0000000c     Game.o (.rodata.str1.17254298735742770936.1)
+                  00013da4    0000000c     Game.o (.rodata.str1.17616781661380311506.1)
+                  00013db0    0000000c     Game.o (.rodata.str1.2521732268882640126.1)
+                  00013dbc    0000000b     Game.o (.rodata.str1.1015804961151458268.1)
+                  00013dc7    0000000b     Game.o (.rodata.str1.1141823195863241297.1)
+                  00013dd2    0000000b     Game.o (.rodata.str1.11773196803251126645.1)
+                  00013ddd    0000000b     Game.o (.rodata.str1.13698595915121159271.1)
+                  00013de8    0000000b     Game.o (.rodata.str1.17466923130245088229.1)
+                  00013df3    0000000b     Game.o (.rodata.str1.18257207061962931239.1)
+                  00013dfe    0000000b     Game.o (.rodata.str1.2161769209173367946.1)
+                  00013e09    0000000b     Game.o (.rodata.str1.3653620756968893130.1)
+                  00013e14    0000000b     Game.o (.rodata.str1.4838356328990738961.1)
+                  00013e1f    0000000b     Game.o (.rodata.str1.7470317559730320657.1)
+                  00013e2a    0000000b     Game.o (.rodata.str1.8739520517631868552.1)
+                  00013e35    00000001     --HOLE-- [fill = 0]
+                  00013e36    0000000a     Game.o (.rodata._ZL3rbt)
+                  00013e40    0000000a     Game.o (.rodata._ZL3rbw)
+                  00013e4a    0000000a     Game.o (.rodata._ZL3rbx)
+                  00013e54    0000000a     Game.o (.rodata.str1.11443654068257921891.1)
+                  00013e5e    0000000a     Game.o (.rodata.str1.11999410278384082202.1)
+                  00013e68    0000000a     Game.o (.rodata.str1.14526117986784708566.1)
+                  00013e72    0000000a     Game.o (.rodata.str1.16918209087121041208.1)
+                  00013e7c    0000000a     Game.o (.rodata.str1.17450106172452804004.1)
+                  00013e86    0000000a     Game.o (.rodata.str1.17703329608471079800.1)
+                  00013e90    0000000a     Game.o (.rodata.str1.17887745200934748473.1)
+                  00013e9a    0000000a     Game.o (.rodata.str1.17941485378437859830.1)
+                  00013ea4    0000000a     Game.o (.rodata.str1.18031875316405499247.1)
+                  00013eae    0000000a     Game.o (.rodata.str1.2076129835255594615.1)
+                  00013eb8    0000000a     Graphics.o (.rodata.str1.5311640008663657367.1)
+                  00013ec2    0000000a     Game.o (.rodata.str1.5859009389263419552.1)
+                  00013ecc    0000000a     Game.o (.rodata.str1.8114888826312813564.1)
+                  00013ed6    00000009     Game.o (.rodata.str1.11870763986863269048.1)
+                  00013edf    00000009     Game.o (.rodata.str1.13087029949725953451.1)
+                  00013ee8    00000009     Game.o (.rodata.str1.16504107200062351675.1)
+                  00013ef1    00000009     Game.o (.rodata.str1.16775837334095760281.1)
+                  00013efa    00000009     Game.o (.rodata.str1.1847515004917977296.1)
+                  00013f03    00000009     Game.o (.rodata.str1.2341575851449693024.1)
+                  00013f0c    00000009     Game.o (.rodata.str1.4176710868289701989.1)
+                  00013f15    00000009     Game.o (.rodata.str1.599818464957961538.1)
+                  00013f1e    00000009     Game.o (.rodata.str1.6596902506822817993.1)
+                  00013f27    00000009     Game.o (.rodata.str1.7196518689540514757.1)
+                  00013f30    00000009     Game.o (.rodata.str1.9713190253971943931.1)
+                  00013f39    00000008     Game.o (.rodata.str1.11819244885499780888.1)
+                  00013f41    00000008     Game.o (.rodata.str1.12133716455376651162.1)
+                  00013f49    00000008     Game.o (.rodata.str1.12494363354314306864.1)
+                  00013f51    00000008     Game.o (.rodata.str1.14773624602048915488.1)
+                  00013f59    00000008     Game.o (.rodata.str1.18060524560561242182.1)
+                  00013f61    00000008     Game.o (.rodata.str1.2341480192724405662.1)
+                  00013f69    00000008     Game.o (.rodata.str1.5515785589229301690.1)
+                  00013f71    00000008     Game.o (.rodata.str1.7730202356290728988.1)
+                  00013f79    00000008     Game.o (.rodata.str1.8461509807302933690.1)
+                  00013f81    00000008     Game.o (.rodata.str1.9327427090430626062.1)
+                  00013f89    00000007     Game.o (.rodata.str1.14052044616915961541.1)
+                  00013f90    00000007     Game.o (.rodata.str1.143820638445076272.1)
+                  00013f97    00000007     Game.o (.rodata.str1.17464321735040121733.1)
+                  00013f9e    00000007     Game.o (.rodata.str1.18135398224984899332.1)
+                  00013fa5    00000007     Game.o (.rodata.str1.18182320321605826267.1)
+                  00013fac    00000007     Game.o (.rodata.str1.5621680957543338714.1)
+                  00013fb3    00000001     --HOLE-- [fill = 0]
+                  00013fb4    00000006     Game.o (.rodata._ZL4tCol)
+                  00013fba    00000006     Game.o (.rodata.str1.11966961073908790585.1)
+                  00013fc0    00000006     Game.o (.rodata.str1.14854862313927035686.1)
+                  00013fc6    00000006     Game.o (.rodata.str1.15069977450493624553.1)
+                  00013fcc    00000006     Game.o (.rodata.str1.2640910437034272092.1)
+                  00013fd2    00000005     Game.o (.rodata.str1.11318116221848138853.1)
+                  00013fd7    00000005     Game.o (.rodata.str1.13826867848474399560.1)
+                  00013fdc    00000005     Game.o (.rodata.str1.18231713313826370509.1)
+                  00013fe1    00000005     Game.o (.rodata.str1.8221132857613302405.1)
+                  00013fe6    00000005     Game.o (.rodata.str1.8286876974834778619.1)
+                  00013feb    00000001     --HOLE-- [fill = 0]
+                  00013fec    00000004     SoundData.o (.rodata.Sound_BeepHighLen)
+                  00013ff0    00000004     SoundData.o (.rodata.Sound_BeepLowLen)
+                  00013ff4    00000004     SoundData.o (.rodata.Sound_BeepMidLen)
+                  00013ff8    00000004     SoundData.o (.rodata.Sound_ClickLen)
+                  00013ffc    00000004     SoundData.o (.rodata.Sound_DefeatLen)
+                  00014000    00000004     SoundData.o (.rodata.Sound_ExplosionLen)
+                  00014004    00000004     SoundData.o (.rodata.Sound_FightLen)
+                  00014008    00000004     SoundData.o (.rodata.Sound_IncomingLen)
+                  0001400c    00000004     SoundData.o (.rodata.Sound_ShootLen)
+                  00014010    00000004     SoundData.o (.rodata.Sound_VictoryLen)
+                  00014014    00000004     SoundData.o (.rodata.Sound_iso_shield)
+                  00014018    00000004     Switches.o (.rodata._ZL3BIT)
+                  0001401c    00000004     Game.o (.rodata.str1.11528238707648362237.1)
+                  00014020    00000004     Game.o (.rodata.str1.12044483639447955212.1)
+                  00014024    00000004     Game.o (.rodata.str1.13070293312779622430.1)
+                  00014028    00000004     Game.o (.rodata.str1.14698132928661522210.1)
+                  0001402c    00000004     Game.o (.rodata.str1.15150329156570499924.1)
+                  00014030    00000004     Game.o (.rodata.str1.18252702745158860359.1)
+                  00014034    00000004     Game.o (.rodata.str1.266037431069674512.1)
+                  00014038    00000004     Game.o (.rodata.str1.7788290913322464286.1)
+                  0001403c    00000003     Game.o (.rodata._ZL4tArm)
+                  0001403f    00000003     Game.o (.rodata._ZL4tPwr)
+                  00014042    00000003     Game.o (.rodata._ZL4tSpd)
+                  00014045    00000003     Game.o (.rodata.str1.14247980305207298811.1)
+                  00014048    00000002     Game.o (.rodata.str1.5783381449683413484.1)
+                  0001404a    00000006     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    0001a2d8    00000008     
+                  0001a2d8    00000004     Lab9HMain.o (.init_array)
+                  0001a2dc    00000004     --HOLE-- [fill = 0]
+
+.sysmem    0    20200000    00000200     UNINITIALIZED
+                  20200000    00000010     libc.a : memory.c.obj (.sysmem)
+                  20200010    000001f0     --HOLE--
+
+.data      0    20200200    00000120     UNINITIALIZED
+                  20200200    00000030     Game.o (.data.missiles)
+                  20200230    00000020     Game.o (.data.explosions)
+                  20200250    00000018     Game.o (.data._ZL5tAbil)
+                  20200268    00000018     Game.o (.data._ZL5tDesc)
+                  20200280    00000018     Game.o (.data._ZL6tNames)
+                  20200298    00000014     Lab9HMain.o (.data.Sensor)
+                  202002ac    00000010     Game.o (.data._ZZL13State_WaitingjE4dots)
+                  202002bc    00000004     Clock.o (.data.BusFreq)
+                  202002c0    00000004     ST7735.o (.data.StX)
+                  202002c4    00000004     ST7735.o (.data.StY)
+                  202002c8    00000004     Sound.o (.data._ZL10soundCount)
+                  202002cc    00000004     Switches.o (.data._ZL13sw_held_ticks)
+                  202002d0    00000004     GameUART.o (.data._ZL6rxHead)
+                  202002d4    00000004     GameUART.o (.data._ZL6rxTail)
+                  202002d8    00000004     Sound.o (.data._ZL7soundPt)
+                  202002dc    00000004     libc.a : aeabi_portable.c.obj (.data.__aeabi_errno)
+                  202002e0    00000002     ST7735.o (.data.StTextColor)
+                  202002e2    00000002     Game.o (.data._ZL12gameTimerSec)
+                  202002e4    00000002     Game.o (.data._ZL3cbX)
+                  202002e6    00000002     Game.o (.data._ZL3cbY)
+                  202002e8    00000002     ST7735.o (.data._ZL6_width)
+                  202002ea    00000002     ST7735.o (.data._ZL7_height)
+                  202002ec    00000002     Game.o (.data._ZL7prevAEX)
+                  202002ee    00000002     Game.o (.data._ZL7prevAEY)
+                  202002f0    00000002     Game.o (.data._ZL7prevBTX)
+                  202002f2    00000002     Game.o (.data._ZL7prevBTY)
+                  202002f4    00000002     Game.o (.data._ZL9sm_active)
+                  202002f6    00000002     Game.o (.data.tankX)
+                  202002f8    00000002     Game.o (.data.tankY)
+                  202002fa    00000001     Game.o (.data._ZL10prevCharge)
+                  202002fb    00000001     Switches.o (.data._ZL10sw_current)
+                  202002fc    00000001     Game.o (.data._ZL10timerBlink)
+                  202002fd    00000001     Game.o (.data._ZL11splashBlink)
+                  202002fe    00000001     Switches.o (.data._ZL11sw_previous)
+                  202002ff    00000001     Game.o (.data._ZL11timerFrames)
+                  20200300    00000001     Game.o (.data._ZL12prevAimValid)
+                  20200301    00000001     Graphics.o (.data._ZL13incomingShown)
+                  20200302    00000001     Game.o (.data._ZL14readySignalSet)
+                  20200303    00000001     Game.o (.data._ZL15ricochetPending)
+                  20200304    00000001     GameUART.o (.data._ZL6pktIdx)
+                  20200305    00000001     GameUART.o (.data._ZL7msgRead)
+                  20200306    00000001     Switches.o (.data._ZL7sw_fell)
+                  20200307    00000001     Switches.o (.data._ZL7sw_rose)
+                  20200308    00000001     Game.o (.data._ZL8sm_timer)
+                  20200309    00000001     Game.o (.data._ZL8waitAnim)
+                  2020030a    00000001     Game.o (.data._ZL9comboHeld)
+                  2020030b    00000001     Game.o (.data.abilityCooldown)
+                  2020030c    00000001     Game.o (.data.aimAngle)
+                  2020030d    00000001     Game.o (.data.cdCount)
+                  2020030e    00000001     Game.o (.data.cdTimer)
+                  2020030f    00000001     Game.o (.data.chargeLevel)
+                  20200310    00000001     Game.o (.data.chargeState)
+                  20200311    00000001     Game.o (.data.facingRight)
+                  20200312    00000001     Game.o (.data.flashTimer)
+                  20200313    00000001     Game.o (.data.gameState)
+                  20200314    00000001     Game.o (.data.iWon)
+                  20200315    00000001     Game.o (.data.incomingTimer)
+                  20200316    00000001     Game.o (.data.invicTimer)
+                  20200317    00000001     Game.o (.data.lang)
+                  20200318    00000001     Game.o (.data.myKills)
+                  20200319    00000001     Game.o (.data.myLives)
+                  2020031a    00000001     Game.o (.data.oppLives)
+                  2020031b    00000001     Game.o (.data.oppTankType)
+                  2020031c    00000001     Game.o (.data.rulesPage)
+                  2020031d    00000001     Game.o (.data.speedBoostTimer)
+                  2020031e    00000001     Game.o (.data.splashPrompt)
+                  2020031f    00000001     Game.o (.data.tankType)
+
+.bss       0    20200320    00000067     UNINITIALIZED
+                  20200320    00000040     GameUART.o (.bss._ZL5rxBuf)
+                  20200360    00000004     TExaS.o (.bss.TExaSLogic)
+                  20200364    00000004     TExaS.o (.bss.TExaSadc)
+                  20200368    00000004     Game.o (.bss._ZL5sm_px)
+                  2020036c    00000004     Game.o (.bss._ZL5sm_py)
+                  20200370    00000004     Game.o (.bss._ZL6sm_xfp)
+                  20200374    00000004     Game.o (.bss._ZL6sm_yfp)
+                  20200378    00000004     Game.o (.bss._ZL7sm_vxfp)
+                  2020037c    00000004     Game.o (.bss._ZL7sm_vyfp)
+                  20200380    00000003     GameUART.o (.bss._ZL6pktBuf)
+                  20200383    00000001     ST7735.o (.bss._ZL8ColStart)
+                  20200384    00000001     ST7735.o (.bss._ZL8Rotation)
+                  20200385    00000001     ST7735.o (.bss._ZL8RowStart)
+                  20200386    00000001     ST7735.o (.bss._ZL8TabColor)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       ST7735.o                       1676    1403      18     
+       Clock.o                        516     0         4      
+       SPI.o                          440     0         0      
+       SlidePot.o                     226     0         0      
+       LaunchPad.o                    180     0         0      
+       Lab9HMain.o                    154     4         20     
+       DAC5.o                         100     0         0      
+       TExaS.o                        64      0         8      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         3356    1407      50     
+                                                               
+    .\DuelTanks\Src\
+       SoundData.o                    0       72918     0      
+       Game.o                         16862   1781      243    
+       Sprites.o                      0       5680      0      
+       Graphics.o                     1360    10        1      
+       GameUART.o                     1078    0         77     
+       Sound.o                        760     0         8      
+       Switches.o                     444     4         8      
+       StatusLEDs.o                   80      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         20584   80393     337    
+                                                               
+    .\ticlang\
+       startup_mspm0g3507_ticlang.o   60      192       0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         60      192       0      
+                                                               
+    C:\TI\ccs2040\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       e_sqrtf.c.obj                  160     0         0      
+       copy_decompress_lzss.c.obj     124     0         0      
+       autoinit.c.obj                 84      0         0      
+       boot_cortex_m.c.obj            40      0         0      
+       copy_zero_init.c.obj           22      0         0      
+       copy_decompress_none.c.obj     18      0         0      
+       memcpy16.S.obj                 18      0         0      
+       strlen.c.obj                   14      0         0      
+       aeabi_portable.c.obj           8       0         4      
+       exit.c.obj                     6       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         498     0         4      
+                                                               
+    C:\TI\ccs2040\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/c/libsysbm.a
+       hostexit.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         4       0         0      
+                                                               
+    C:\TI\ccs2040\ccs\tools\compiler\ti-cgt-armllvm_4.0.4.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
+       addsf3.S.obj                   216     0         0      
+       mulsf3.S.obj                   140     0         0      
+       aeabi_idivmod.S.obj            86      0         0      
+       aeabi_uidivmod.S.obj           64      0         0      
+       floatsisf.S.obj                60      0         0      
+       muldsi3.S.obj                  58      0         0      
+       fixsfsi.S.obj                  56      0         0      
+       aeabi_memcpy.S.obj             8       0         0      
+       aeabi_div0.c.obj               2       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         690     0         0      
+                                                               
+       Heap:                          0       0         512    
+       Stack:                         0       0         512    
+       Linker Generated:              0       163       0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   25192   82155     1415   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0001a374 records: 2, size/record: 8, table size: 16
+	.data: load addr=0001a2e0, load size=0000007f bytes, run addr=20200200, run size=00000120 bytes, compression=lzss
+	.bss: load addr=0001a36c, load size=00000008 bytes, run addr=20200320, run size=00000067 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0001a360 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                               
+-------   ----                               
+0001a031  ADC0_IRQHandler                    
+0001a031  ADC1_IRQHandler                    
+0001a031  AES_IRQHandler                     
+202002bc  BusFreq                            
+0001a2c6  C$$EXIT                            
+0001a031  CANFD0_IRQHandler                  
+0001a031  DAC0_IRQHandler                    
+0001a031  DMA_IRQHandler                     
+0001a031  Default_Handler                    
+00012e9c  ExpF0                              
+00013024  ExpF1                              
+000131ac  ExpF2                              
+00013334  ExpF3                              
+00013b90  ExpFrames                          
+0001a031  GROUP0_IRQHandler                  
+0001a031  GROUP1_IRQHandler                  
+0001a2c7  HOSTexit                           
+0001a04d  HardFault_Handler                  
+000136a6  HeartEmpty                         
+00013726  HeartFull                          
+0001a031  I2C0_IRQHandler                    
+0001a031  I2C1_IRQHandler                    
+000137a6  MissileLeft                        
+0001380a  MissileRight                       
+0001a031  NMI_Handler                        
+0001a031  PendSV_Handler                     
+0001a031  RTC_IRQHandler                     
+0001a2cb  Reset_Handler                      
+0001a2d8  SHT$$INIT_ARRAY$$Base              
+0001a2dc  SHT$$INIT_ARRAY$$Limit             
+0001a031  SPI0_IRQHandler                    
+0001a031  SPI1_IRQHandler                    
+0001a031  SVC_Handler                        
+20200298  Sensor                             
+00010403  Sound_BeepHighData                 
+00013fec  Sound_BeepHighLen                  
+0001092e  Sound_BeepLowData                  
+00013ff0  Sound_BeepLowLen                   
+00010e59  Sound_BeepMidData                  
+00013ff4  Sound_BeepMidLen                   
+000134bc  Sound_ClickData                    
+00013ff8  Sound_ClickLen                     
+0000d5f0  Sound_DefeatData                   
+00013ffc  Sound_DefeatLen                    
+0000ee7b  Sound_ExplosionData                
+00014000  Sound_ExplosionLen                 
+0001187f  Sound_FightData                    
+00014004  Sound_FightLen                     
+00011ccd  Sound_IncomingData                 
+00014008  Sound_IncomingLen                  
+000000c0  Sound_ShootData                    
+0001400c  Sound_ShootLen                     
+0000af9e  Sound_VictoryData                  
+00014010  Sound_VictoryLen                   
+00014014  Sound_iso_shield                   
+202002e0  StTextColor                        
+202002c0  StX                                
+202002c4  StY                                
+00019521  SysTick_Handler                    
+20200360  TExaSLogic                         
+20200364  TExaSadc                           
+0001a031  TIMA0_IRQHandler                   
+0001a031  TIMA1_IRQHandler                   
+0001a031  TIMG0_IRQHandler                   
+00019e55  TIMG12_IRQHandler                  
+0001a031  TIMG6_IRQHandler                   
+000199b5  TIMG7_IRQHandler                   
+0001a031  TIMG8_IRQHandler                   
+0001a209  TI_memcpy_small                    
+0001211c  Tank1Left                          
+0001235c  Tank1Right                         
+0001259c  Tank2Left                          
+000127dc  Tank2Right                         
+00012a1c  Tank3Left                          
+00012c5c  Tank3Right                         
+000139cc  TankSprites                        
+00013606  TerrainY                           
+0001a031  UART0_IRQHandler                   
+0001a031  UART1_IRQHandler                   
+0001a031  UART2_IRQHandler                   
+0001a031  UART3_IRQHandler                   
+0001a27d  _Z10Clock_Freqv                    
+00019295  _Z10Sound_Beeph                    
+00019dfd  _Z10Sound_Initv                    
+00019e7d  _Z10Sound_Stopv                    
+00019571  _Z10led_togglej                    
+0001a22d  _Z11Clock_Delayj                   
+00018cb1  _Z11Game_Updatej                   
+00019be5  _Z11SPI_OutDatac                   
+00019f45  _Z11Sound_Clickv                   
+0001a0d9  _Z11Sound_Fightv                   
+0001a0f1  _Z11Sound_Shootv                   
+00019c1d  _Z11Sound_StartPKhj                
+0001a069  _Z11Switch_Heldh                   
+00018b0d  _Z11Switch_Initv                   
+00018795  _Z11Switch_Tickv                   
+00019971  _Z12GFX_DrawCharssctth             
+00016e39  _Z12GFX_DrawLinesssst              
+000183b5  _Z12GFX_DrawRectsssst              
+000180c1  _Z12GFX_FillRectsssst              
+0001882d  _Z12ST7735_InitR10initRFlags       
+0001a109  _Z12Sound_Defeatv                  
+000193c1  _Z13GFX_DrawPixelsst               
+00019ea5  _Z13GameUART_Initv                 
+00019f69  _Z13Sound_Barrierv                 
+0001a121  _Z13Sound_Victoryv                 
+00019cfd  _Z14Clock_Delay1msj                
+000191b1  _Z14GFX_DrawStringssPKctth         
+00018dc1  _Z14GFX_FillCirclessst             
+0001a1df  _Z14GFX_FillScreent                
+00018f49  _Z14LaunchPad_Initv                
+00019741  _Z14SPI_OutCommandc                
+00019f8d  _Z14Sound_Incomingv                
+0001a085  _Z14Switch_Pressedh                
+00019af5  _Z14SysTick_IntArmjj               
+00019c55  _Z15ActivatePortA_Bv               
+00016421  _Z15Clock_Init80MHzi               
+00017075  _Z15ST7735_FillRectsssst           
+0001a139  _Z15Sound_Explosionv               
+0001a23d  _Z15Sound_IsPlayingv               
+0001a0a1  _Z15Switch_Releasedh               
+00019861  _Z16GFX_DrawIncomingv              
+00016bd5  _Z16GameUART_ReceiveP12GamePacket_t
+0001a151  _Z16GameUART_SendHith              
+0001a169  _Z16GameUART_SendWinh              
+00016785  _Z16ST7735_DrawCharSsscssh         
+00019225  _Z16ST7735_DrawPixelsst            
+00019d31  _Z16ST7735_SetCursorjj             
+00019c8d  _Z17GFX_ClearIncomingv             
+00019d99  _Z17GameUART_SendFirehhh           
+0001a181  _Z17GameUART_SendLangh             
+0001a199  _Z17GameUART_SendTankh             
+00019e29  _Z17ST7735_FillScreent             
+000179a1  _Z18ST7735_SetRotationh            
+000192fd  _Z22GFX_DrawStringCenteredsPKctth  
+00019fd5  _Z8DAC5_Outj                       
+0001a0bd  _Z8GFX_Initv                       
+0001a295  _Z8PLL_Initv                       
+000178a9  _Z8SPI_Initv                       
+000198a5  _Z9DAC5_Initv                      
+0001a2a7  _Z9Game_Initv                      
+000199f5  _Z9SPI_Resetv                      
+000198e9  _Z9Switch_Inv                      
+000197d1  _ZN8SlidePot2InEv                  
+00019041  _ZN8SlidePot4InitEv                
+0001a013  _ZN8SlidePotC1Ejj                  
+0001a013  _ZN8SlidePotC2Ejj                  
+0001a25d  _ZNSt3__16__math4sqrtB8nn180100Ef  
+20208000  __STACK_END                        
+00000200  __STACK_SIZE                       
+00000200  __SYSMEM_SIZE                      
+00000000  __TI_ATRegion0_region_sz           
+00000000  __TI_ATRegion0_src_addr            
+00000000  __TI_ATRegion0_trg_addr            
+00000000  __TI_ATRegion1_region_sz           
+00000000  __TI_ATRegion1_src_addr            
+00000000  __TI_ATRegion1_trg_addr            
+00000000  __TI_ATRegion2_region_sz           
+00000000  __TI_ATRegion2_src_addr            
+00000000  __TI_ATRegion2_trg_addr            
+0001a374  __TI_CINIT_Base                    
+0001a384  __TI_CINIT_Limit                   
+0001a384  __TI_CINIT_Warm                    
+0001a360  __TI_Handler_Table_Base            
+0001a36c  __TI_Handler_Table_Limit           
+000194cd  __TI_auto_init_nobinit             
+000190bd  __TI_decompress_lzss               
+0001a21b  __TI_decompress_none               
+ffffffff  __TI_pprof_out_hndl                
+ffffffff  __TI_prof_data_size                
+ffffffff  __TI_prof_data_start               
+00000000  __TI_static_base__                 
+0001a1c9  __TI_zero_init_nomemset            
+00017ff3  __addsf3                           
+202002dc  __aeabi_errno                      
+0001a2b1  __aeabi_errno_addr                 
+00019cc5  __aeabi_f2iz                       
+00017ff3  __aeabi_fadd                       
+00018c25  __aeabi_fmul                       
+00017fe9  __aeabi_fsub                       
+00019b6d  __aeabi_i2f                        
+00019475  __aeabi_idiv                       
+0001608b  __aeabi_idiv0                      
+00019475  __aeabi_idivmod                    
+0001a2b9  __aeabi_memcpy                     
+0001a2b9  __aeabi_memcpy4                    
+0001a2b9  __aeabi_memcpy8                    
+00019ab5  __aeabi_uidiv                      
+00019ab5  __aeabi_uidivmod                   
+ffffffff  __binit__                          
+00019cc5  __fixsfsi                          
+00019b6d  __floatsisf                        
+UNDEFED   __mpu_init                         
+00019ba9  __muldsi3                          
+00018c25  __mulsf3                           
+20207e00  __stack                            
+20200000  __start___llvm_prf_bits            
+20200000  __start___llvm_prf_cnts            
+20200000  __stop___llvm_prf_bits             
+20200000  __stop___llvm_prf_cnts             
+00017fe9  __subsf3                           
+00019f1d  _c_int00_noargs                    
+20200000  _sys_memory                        
+UNDEFED   _system_post_cinit                 
+0001a2cf  _system_pre_init                   
+2020030b  abilityCooldown                    
+0001a2c1  abort                              
+2020030c  aimAngle                           
+ffffffff  binit                              
+2020030d  cdCount                            
+2020030e  cdTimer                            
+2020030f  chargeLevel                        
+20200310  chargeState                        
+0001386e  cos32                              
+20200230  explosions                         
+20200311  facingRight                        
+20200312  flashTimer                         
+20200313  gameState                          
+20200314  iWon                               
+20200315  incomingTimer                      
+00000000  interruptVectors                   
+20200316  invicTimer                         
+0000658d  iso_shield                         
+20200317  lang                               
+00019819  main                               
+20200200  missiles                           
+20200318  myKills                            
+20200319  myLives                            
+2020031a  oppLives                           
+2020031b  oppTankType                        
+2020031c  rulesPage                          
+000138c8  sin32                              
+2020031d  speedBoostTimer                    
+2020031e  splashPrompt                       
+000186f5  sqrtf                              
+0001a26d  strlen                             
+2020031f  tankType                           
+202002f6  tankX                              
+202002f8  tankY                              
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                               
+-------   ----                               
+00000000  __TI_ATRegion0_region_sz           
+00000000  __TI_ATRegion0_src_addr            
+00000000  __TI_ATRegion0_trg_addr            
+00000000  __TI_ATRegion1_region_sz           
+00000000  __TI_ATRegion1_src_addr            
+00000000  __TI_ATRegion1_trg_addr            
+00000000  __TI_ATRegion2_region_sz           
+00000000  __TI_ATRegion2_src_addr            
+00000000  __TI_ATRegion2_trg_addr            
+00000000  __TI_static_base__                 
+00000000  interruptVectors                   
+000000c0  Sound_ShootData                    
+00000200  __STACK_SIZE                       
+00000200  __SYSMEM_SIZE                      
+0000658d  iso_shield                         
+0000af9e  Sound_VictoryData                  
+0000d5f0  Sound_DefeatData                   
+0000ee7b  Sound_ExplosionData                
+00010403  Sound_BeepHighData                 
+0001092e  Sound_BeepLowData                  
+00010e59  Sound_BeepMidData                  
+0001187f  Sound_FightData                    
+00011ccd  Sound_IncomingData                 
+0001211c  Tank1Left                          
+0001235c  Tank1Right                         
+0001259c  Tank2Left                          
+000127dc  Tank2Right                         
+00012a1c  Tank3Left                          
+00012c5c  Tank3Right                         
+00012e9c  ExpF0                              
+00013024  ExpF1                              
+000131ac  ExpF2                              
+00013334  ExpF3                              
+000134bc  Sound_ClickData                    
+00013606  TerrainY                           
+000136a6  HeartEmpty                         
+00013726  HeartFull                          
+000137a6  MissileLeft                        
+0001380a  MissileRight                       
+0001386e  cos32                              
+000138c8  sin32                              
+000139cc  TankSprites                        
+00013b90  ExpFrames                          
+00013fec  Sound_BeepHighLen                  
+00013ff0  Sound_BeepLowLen                   
+00013ff4  Sound_BeepMidLen                   
+00013ff8  Sound_ClickLen                     
+00013ffc  Sound_DefeatLen                    
+00014000  Sound_ExplosionLen                 
+00014004  Sound_FightLen                     
+00014008  Sound_IncomingLen                  
+0001400c  Sound_ShootLen                     
+00014010  Sound_VictoryLen                   
+00014014  Sound_iso_shield                   
+0001608b  __aeabi_idiv0                      
+00016421  _Z15Clock_Init80MHzi               
+00016785  _Z16ST7735_DrawCharSsscssh         
+00016bd5  _Z16GameUART_ReceiveP12GamePacket_t
+00016e39  _Z12GFX_DrawLinesssst              
+00017075  _Z15ST7735_FillRectsssst           
+000178a9  _Z8SPI_Initv                       
+000179a1  _Z18ST7735_SetRotationh            
+00017fe9  __aeabi_fsub                       
+00017fe9  __subsf3                           
+00017ff3  __addsf3                           
+00017ff3  __aeabi_fadd                       
+000180c1  _Z12GFX_FillRectsssst              
+000183b5  _Z12GFX_DrawRectsssst              
+000186f5  sqrtf                              
+00018795  _Z11Switch_Tickv                   
+0001882d  _Z12ST7735_InitR10initRFlags       
+00018b0d  _Z11Switch_Initv                   
+00018c25  __aeabi_fmul                       
+00018c25  __mulsf3                           
+00018cb1  _Z11Game_Updatej                   
+00018dc1  _Z14GFX_FillCirclessst             
+00018f49  _Z14LaunchPad_Initv                
+00019041  _ZN8SlidePot4InitEv                
+000190bd  __TI_decompress_lzss               
+000191b1  _Z14GFX_DrawStringssPKctth         
+00019225  _Z16ST7735_DrawPixelsst            
+00019295  _Z10Sound_Beeph                    
+000192fd  _Z22GFX_DrawStringCenteredsPKctth  
+000193c1  _Z13GFX_DrawPixelsst               
+00019475  __aeabi_idiv                       
+00019475  __aeabi_idivmod                    
+000194cd  __TI_auto_init_nobinit             
+00019521  SysTick_Handler                    
+00019571  _Z10led_togglej                    
+00019741  _Z14SPI_OutCommandc                
+000197d1  _ZN8SlidePot2InEv                  
+00019819  main                               
+00019861  _Z16GFX_DrawIncomingv              
+000198a5  _Z9DAC5_Initv                      
+000198e9  _Z9Switch_Inv                      
+00019971  _Z12GFX_DrawCharssctth             
+000199b5  TIMG7_IRQHandler                   
+000199f5  _Z9SPI_Resetv                      
+00019ab5  __aeabi_uidiv                      
+00019ab5  __aeabi_uidivmod                   
+00019af5  _Z14SysTick_IntArmjj               
+00019b6d  __aeabi_i2f                        
+00019b6d  __floatsisf                        
+00019ba9  __muldsi3                          
+00019be5  _Z11SPI_OutDatac                   
+00019c1d  _Z11Sound_StartPKhj                
+00019c55  _Z15ActivatePortA_Bv               
+00019c8d  _Z17GFX_ClearIncomingv             
+00019cc5  __aeabi_f2iz                       
+00019cc5  __fixsfsi                          
+00019cfd  _Z14Clock_Delay1msj                
+00019d31  _Z16ST7735_SetCursorjj             
+00019d99  _Z17GameUART_SendFirehhh           
+00019dfd  _Z10Sound_Initv                    
+00019e29  _Z17ST7735_FillScreent             
+00019e55  TIMG12_IRQHandler                  
+00019e7d  _Z10Sound_Stopv                    
+00019ea5  _Z13GameUART_Initv                 
+00019f1d  _c_int00_noargs                    
+00019f45  _Z11Sound_Clickv                   
+00019f69  _Z13Sound_Barrierv                 
+00019f8d  _Z14Sound_Incomingv                
+00019fd5  _Z8DAC5_Outj                       
+0001a013  _ZN8SlidePotC1Ejj                  
+0001a013  _ZN8SlidePotC2Ejj                  
+0001a031  ADC0_IRQHandler                    
+0001a031  ADC1_IRQHandler                    
+0001a031  AES_IRQHandler                     
+0001a031  CANFD0_IRQHandler                  
+0001a031  DAC0_IRQHandler                    
+0001a031  DMA_IRQHandler                     
+0001a031  Default_Handler                    
+0001a031  GROUP0_IRQHandler                  
+0001a031  GROUP1_IRQHandler                  
+0001a031  I2C0_IRQHandler                    
+0001a031  I2C1_IRQHandler                    
+0001a031  NMI_Handler                        
+0001a031  PendSV_Handler                     
+0001a031  RTC_IRQHandler                     
+0001a031  SPI0_IRQHandler                    
+0001a031  SPI1_IRQHandler                    
+0001a031  SVC_Handler                        
+0001a031  TIMA0_IRQHandler                   
+0001a031  TIMA1_IRQHandler                   
+0001a031  TIMG0_IRQHandler                   
+0001a031  TIMG6_IRQHandler                   
+0001a031  TIMG8_IRQHandler                   
+0001a031  UART0_IRQHandler                   
+0001a031  UART1_IRQHandler                   
+0001a031  UART2_IRQHandler                   
+0001a031  UART3_IRQHandler                   
+0001a04d  HardFault_Handler                  
+0001a069  _Z11Switch_Heldh                   
+0001a085  _Z14Switch_Pressedh                
+0001a0a1  _Z15Switch_Releasedh               
+0001a0bd  _Z8GFX_Initv                       
+0001a0d9  _Z11Sound_Fightv                   
+0001a0f1  _Z11Sound_Shootv                   
+0001a109  _Z12Sound_Defeatv                  
+0001a121  _Z13Sound_Victoryv                 
+0001a139  _Z15Sound_Explosionv               
+0001a151  _Z16GameUART_SendHith              
+0001a169  _Z16GameUART_SendWinh              
+0001a181  _Z17GameUART_SendLangh             
+0001a199  _Z17GameUART_SendTankh             
+0001a1c9  __TI_zero_init_nomemset            
+0001a1df  _Z14GFX_FillScreent                
+0001a209  TI_memcpy_small                    
+0001a21b  __TI_decompress_none               
+0001a22d  _Z11Clock_Delayj                   
+0001a23d  _Z15Sound_IsPlayingv               
+0001a25d  _ZNSt3__16__math4sqrtB8nn180100Ef  
+0001a26d  strlen                             
+0001a27d  _Z10Clock_Freqv                    
+0001a295  _Z8PLL_Initv                       
+0001a2a7  _Z9Game_Initv                      
+0001a2b1  __aeabi_errno_addr                 
+0001a2b9  __aeabi_memcpy                     
+0001a2b9  __aeabi_memcpy4                    
+0001a2b9  __aeabi_memcpy8                    
+0001a2c1  abort                              
+0001a2c6  C$$EXIT                            
+0001a2c7  HOSTexit                           
+0001a2cb  Reset_Handler                      
+0001a2cf  _system_pre_init                   
+0001a2d8  SHT$$INIT_ARRAY$$Base              
+0001a2dc  SHT$$INIT_ARRAY$$Limit             
+0001a360  __TI_Handler_Table_Base            
+0001a36c  __TI_Handler_Table_Limit           
+0001a374  __TI_CINIT_Base                    
+0001a384  __TI_CINIT_Limit                   
+0001a384  __TI_CINIT_Warm                    
+20200000  __start___llvm_prf_bits            
+20200000  __start___llvm_prf_cnts            
+20200000  __stop___llvm_prf_bits             
+20200000  __stop___llvm_prf_cnts             
+20200000  _sys_memory                        
+20200200  missiles                           
+20200230  explosions                         
+20200298  Sensor                             
+202002bc  BusFreq                            
+202002c0  StX                                
+202002c4  StY                                
+202002dc  __aeabi_errno                      
+202002e0  StTextColor                        
+202002f6  tankX                              
+202002f8  tankY                              
+2020030b  abilityCooldown                    
+2020030c  aimAngle                           
+2020030d  cdCount                            
+2020030e  cdTimer                            
+2020030f  chargeLevel                        
+20200310  chargeState                        
+20200311  facingRight                        
+20200312  flashTimer                         
+20200313  gameState                          
+20200314  iWon                               
+20200315  incomingTimer                      
+20200316  invicTimer                         
+20200317  lang                               
+20200318  myKills                            
+20200319  myLives                            
+2020031a  oppLives                           
+2020031b  oppTankType                        
+2020031c  rulesPage                          
+2020031d  speedBoostTimer                    
+2020031e  splashPrompt                       
+2020031f  tankType                           
+20200360  TExaSLogic                         
+20200364  TExaSadc                           
+20207e00  __stack                            
+20208000  __STACK_END                        
+ffffffff  __TI_pprof_out_hndl                
+ffffffff  __TI_prof_data_size                
+ffffffff  __TI_prof_data_start               
+ffffffff  __binit__                          
+ffffffff  binit                              
+UNDEFED   __mpu_init                         
+UNDEFED   _system_post_cinit                 
+
+[239 symbols]
