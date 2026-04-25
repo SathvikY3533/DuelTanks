@@ -1,7 +1,7 @@
 # Duel Tanks
 ### Two-player real-time tank battle — ECE319H Spring 2026
 
-> Check out more of my work at **[sathvikyechuri.com](https://sathvikyechuri.com)**
+> Check out more of my work at **[sathvikyechuri.com](https://www.sathvikyechuri.com)**
 
 ---
 
